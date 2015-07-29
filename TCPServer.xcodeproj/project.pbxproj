@@ -14,6 +14,9 @@
 		784531641B68B0CD00FF0B9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 784531631B68B0CD00FF0B9F /* Images.xcassets */; };
 		784531671B68B0CD00FF0B9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784531651B68B0CD00FF0B9F /* LaunchScreen.xib */; };
 		784531731B68B0CD00FF0B9F /* TCPServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 784531721B68B0CD00FF0B9F /* TCPServerTests.m */; };
+		784531821B68B41000FF0B9F /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 784531811B68B41000FF0B9F /* GCDAsyncSocket.m */; };
+		784531881B68B44700FF0B9F /* HexHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 784531861B68B44700FF0B9F /* HexHelper.m */; };
+		7845318B1B68BDE700FF0B9F /* TCPServerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7845318A1B68BDE700FF0B9F /* TCPServerTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,13 @@
 		7845316C1B68B0CD00FF0B9F /* TCPServerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCPServerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		784531711B68B0CD00FF0B9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		784531721B68B0CD00FF0B9F /* TCPServerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCPServerTests.m; sourceTree = "<group>"; };
+		7845317C1B68B16D00FF0B9F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		784531801B68B41000FF0B9F /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		784531811B68B41000FF0B9F /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		784531851B68B44700FF0B9F /* HexHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexHelper.h; sourceTree = "<group>"; };
+		784531861B68B44700FF0B9F /* HexHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexHelper.m; sourceTree = "<group>"; };
+		784531891B68BDE700FF0B9F /* TCPServerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPServerTool.h; sourceTree = "<group>"; };
+		7845318A1B68BDE700FF0B9F /* TCPServerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPServerTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,7 @@
 		7845314A1B68B0CD00FF0B9F = {
 			isa = PBXGroup;
 			children = (
+				7845317C1B68B16D00FF0B9F /* PrefixHeader.pch */,
 				784531551B68B0CD00FF0B9F /* TCPServer */,
 				7845316F1B68B0CD00FF0B9F /* TCPServerTests */,
 				784531541B68B0CD00FF0B9F /* Products */,
@@ -81,6 +92,12 @@
 		784531551B68B0CD00FF0B9F /* TCPServer */ = {
 			isa = PBXGroup;
 			children = (
+				784531891B68BDE700FF0B9F /* TCPServerTool.h */,
+				7845318A1B68BDE700FF0B9F /* TCPServerTool.m */,
+				784531851B68B44700FF0B9F /* HexHelper.h */,
+				784531861B68B44700FF0B9F /* HexHelper.m */,
+				784531801B68B41000FF0B9F /* GCDAsyncSocket.h */,
+				784531811B68B41000FF0B9F /* GCDAsyncSocket.m */,
 				7845315A1B68B0CD00FF0B9F /* AppDelegate.h */,
 				7845315B1B68B0CD00FF0B9F /* AppDelegate.m */,
 				7845315D1B68B0CD00FF0B9F /* ViewController.h */,
@@ -219,8 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				784531821B68B41000FF0B9F /* GCDAsyncSocket.m in Sources */,
 				7845315F1B68B0CD00FF0B9F /* ViewController.m in Sources */,
 				7845315C1B68B0CD00FF0B9F /* AppDelegate.m in Sources */,
+				7845318B1B68BDE700FF0B9F /* TCPServerTool.m in Sources */,
+				784531881B68B44700FF0B9F /* HexHelper.m in Sources */,
 				784531591B68B0CD00FF0B9F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +367,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = TCPServer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -357,7 +380,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = TCPServer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -8,8 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "TCPServerTool.h"
 
+@interface ViewController : UIViewController<TCPServerToolDelegate>
+@property (strong, nonatomic) IBOutlet UIView *bindingView;
+@property (strong, nonatomic) IBOutlet UITextField *portTextField;
+@property (strong, nonatomic) IBOutlet UIButton *bindingButton;
+
+- (IBAction)settings:(UIButton *)sender;
+- (IBAction)goToBind:(UIButton *)sender;
+
+@property (strong, nonatomic) IBOutlet UIImageView *curtainsImageView;
+
+@property (strong, nonatomic) IBOutlet UIImageView *hallLightImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *dinningRoomLightImageView;
+@property (strong, nonatomic) IBOutlet UILabel *hallBrintness;
+@property (strong, nonatomic) IBOutlet UILabel *dinningRoomBrightness;
 
 @end
 
