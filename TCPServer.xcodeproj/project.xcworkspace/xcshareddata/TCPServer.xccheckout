@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>CA2FC2F8-C6CB-43C8-9659-9D9EE2832D3B</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>TCPServer</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D02714896EDCEA92F983193CC16AB3B03E871FC8</key>
 		<string>https://github.com/DoesGodBlessAManWhoDoNotBelieveHim/TCPServer.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TCPServer.xcodeproj/project.xcworkspace</string>
+	<string>TCPServer.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D02714896EDCEA92F983193CC16AB3B03E871FC8</key>
